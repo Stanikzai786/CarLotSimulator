@@ -23,14 +23,16 @@ namespace CarLotSimulator
             //Call each of the methods for each car
             Car car1 = new Car("BMW", "M4", 2022, "vroom vroom", "beep beep", true);
             carLot.ListOfCars.Add(car1);
+            
+            Console.WriteLine($"Number of cars: {CarLots.numberOfCars}");
 
             Car car2 = new Car();
             car2.Year = 2022;
             car2.Make = "Toyota";
             car2.Model = "Pruis";
             carLot.ListOfCars.Add(car2);
-
-
+            
+            Console.WriteLine($"Number of cars: {CarLots.numberOfCars}");
 
 
             List<int> list = new List<int> { 1, 2, 3 };
@@ -42,12 +44,14 @@ namespace CarLotSimulator
                 HonkNoise = "yak yak",
                 IsDriveable = true
             };
+
+            Console.WriteLine($"Number of cars: {CarLots.numberOfCars}");
             carLot.ListOfCars.Add(car3);
             foreach (var car in carLot.ListOfCars)
             {
                 Console.WriteLine($" year:  {car.Year} Make {car.Make} Model {car.Model}");
+                Console.WriteLine($"Number of cars in the lot is: {CarLots.numberOfCars}");
             }
-
         }
     }
     //*************BONUS*************//

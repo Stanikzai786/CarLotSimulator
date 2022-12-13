@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CarLotSimulator;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
@@ -9,6 +10,10 @@ namespace Classes
 {
     public class Car
     {
+        public Car()
+        {
+            CarLots.numberOfCars++;
+        }
         public Car(string make, string model, int year, string honkNoise, string engineNoise, bool isDriveable )
         {
             Make = make;
@@ -17,9 +22,7 @@ namespace Classes
             EngineNoise = engineNoise;
             HonkNoise = honkNoise;
             IsDriveable = isDriveable;
-        }
-        public Car()
-        {
+            CarLots.numberOfCars++;
 
         }
 
